@@ -1,0 +1,52 @@
+{
+  "name": "calculator_testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --config .prettierrc.json --write app/**/*.*",
+    "lint": "eslint -c .eslintrc.json ./",
+    "test": "mocha --config ./test/config/.mocharc.json",
+    "coverage": "nyc --config .nycrc.json npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/whitechapel5991/calculator_testing_mocha.git"
+  },
+  "keywords": [
+    "mocha",
+    "chai",
+    "eslint",
+    "prettier",
+    "nyc",
+    "mochawesome",
+    "husky"
+  ],
+  "author": "Dzianis Shcharbakou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whitechapel5991/calculator_testing_mocha/issues"
+  },
+  "homepage": "https://github.com/whitechapel5991/calculator_testing_mocha#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "husky": "^4.2.5",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier && npm run lint && npm run coverage"
+    }
+  }
+}
